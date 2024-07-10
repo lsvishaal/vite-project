@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Navbar, MyComponent } from './App.jsx';
+import { toggleTheme ,Navbar, MyComponent } from './Navbar.jsx';
 import './output.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -9,3 +9,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <MyComponent />
   </React.StrictMode>
 );
+
