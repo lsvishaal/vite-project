@@ -7,8 +7,8 @@ import './output.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <Navbar /> */}
-    {/* <MyComponent /> */}
+    <Navbar />
+    <MyComponent />
     {/* <Counter /> */}
     <Card />
   </React.StrictMode>
