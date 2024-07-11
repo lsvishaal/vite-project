@@ -1,13 +1,23 @@
-import React from 'react'
+import React from "react";
 
 function Card() {
   return (
-    <div>
-        <img src="https://images.pexels.com/photos/26652844/pexels-photo-26652844/free-photo-of-a-sign-that-says-to-telescope-on-top-of-a-building.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-        <h1 className='text-2xl bg-green-500 p-3 rounded'></h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, accusantium.</p>
+    <div className="card bg-base-100 w-96 shadow-xl">
+      <figure>
+        <img
+          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+          alt="Shoes"
+        />
+      </figure>
+      <div className="card-body">
+        <h2 className="card-title">Shoes!</h2>
+        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <div className="card-actions justify-end">
+          <button className="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Card
+export default Card;
