@@ -1,28 +1,39 @@
+
 import React from 'react';
 
-
+// Correctly scoped toggleTheme function
 function toggleTheme() {
+  // Functionality remains the same
+}
+
+// toggleTheme component that uses the toggleTheme function
+function ToggleThemeComponent() {
   const [theme, setTheme] = React.useState('light');
-  const toggleTheme = () => {
+  
+  // Function to toggle the theme
+  const toggle = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
   };
-  // initially set the theme and "listen" for changes to apply them to the HTML tag
+
   React.useEffect(() => {
     document.querySelector('html').setAttribute('data-theme', theme);
   }, [theme]);
+
   return (
     <label className="swap swap-rotate">
-      <input onClick={toggleTheme} type="checkbox" />
+      <input onClick={toggle} type="checkbox" />
       <div className="swap-on">DARKMODE</div>
       <div className="swap-off">LIGHTMODE</div>
     </label>
   );
 }
 
+export { ToggleThemeComponent as toggleTheme};
+
 function Navbar() {
   return (
     <>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 data-theme='cupcake'">
         <div className="flex-1">
           <a className="btn btn-ghost text-xl">daisyUI</a>
         </div>
@@ -86,10 +97,10 @@ function Navbar() {
 
 const MyComponent = () => {
   return (
-    <div className="bg-purple-500 text-black py-2">
+    <div className="bg-purple-500 text-black py-2 place-content-center">
       Totally Legitimate E-Commerce Site
     </div>
   );
 };
 
-export {toggleTheme, Navbar, MyComponent };
+export { Navbar, MyComponent };
