@@ -7,9 +7,9 @@ import './output.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Navbar />
-    <MyComponent />
-    <Counter />
+    {/* <Navbar /> */}
+    {/* <MyComponent /> */}
+    {/* <Counter /> */}
     <Card />
   </React.StrictMode>
 );
